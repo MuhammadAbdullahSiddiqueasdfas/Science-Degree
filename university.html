@@ -1,0 +1,3304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affiliated University - F.G Science Degree College</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="logo.jpg" type="image/x-icon">
+  <style>
+    :root {
+      --primary: #1a3e72;  /* Deep Blue */
+      --secondary: #0a2d5a; /* Darker Blue */
+      --accent: #f7c744; /* Gold */
+      --bg: #ffffff;
+      --text-dark: #111;
+      --text-light: #fff;
+      --glow: 0 0 15px rgba(247, 199, 68, 0.7);
+      --nav-glow: 0 0 20px rgba(26, 62, 114, 0.6);
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      min-height: 100vh;
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* Navigation - Premium Design */
+    nav {
+         background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 2.5rem 3rem 1.5rem; /* Increased top padding (2.5rem = 40px) */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+      box-shadow: var(--nav-glow);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      align-items: center;
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav.scrolled {
+      padding: 0.8rem 3rem;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+      background: rgba(10, 45, 90, 0.95);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-text{
+      margin-left: 13px;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      margin-top:-40px;
+      margin-right: auto;
+
+    }
+
+    @media (max-width: 768px) {
+  ul.nav-links {
+    gap: 0.5rem; /* Reduce gap in mobile view */
+  }
+}
+@media (min-width: 768px) {
+  ul.nav-links {
+    gap: 0.5rem; /* Further reduce gap on larger screens */
+  }
+}
+
+.logo-img {
+  height: 120px; /* Adjust initial size */
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.2);
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+      margin-top: 10px;
+    }
+
+    .logo-main {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-light);
+      line-height: 1.2;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .logo-main::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s ease;
+    }
+
+    .logo-container:hover .logo-main::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .logo-sub {
+      font-size: 1rem;
+      color: var(--accent);
+      font-style: italic;
+      letter-spacing: 1px;
+      margin-top: 5px;
+      transition: all 0.3s ease;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .logo-container::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: calc(100% + 20px);
+      height: calc(100% + 20px);
+      background: linear-gradient(45deg, 
+        transparent, 
+        transparent, 
+        rgba(255,255,255,0.2), 
+        transparent, 
+        transparent);
+      transform: translateX(-100%) skewX(-15deg);
+      transition: transform 0.8s ease;
+      z-index: 1;
+    }
+
+    .logo-container:hover::before {
+      transform: translateX(200%) skewX(-15deg);
+    }
+
+    ul.nav-links {
+      list-style: none;
+      display: flex;
+      gap: 0.8rem;
+      margin-left: auto;
+    }
+
+    ul.nav-links li {
+      position: relative;
+      perspective: 1000px;
+    }
+
+    ul.nav-links li a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      padding: 10px 12px;
+      transition: all 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.1rem;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    ul.nav-links li a .nav-icon {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      opacity: 0.9;
+      transition: all 0.4s ease;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+
+    ul.nav-links li a:hover .nav-icon {
+      transform: translateY(-8px) scale(1.1);
+      opacity: 1;
+      color: var(--accent);
+      text-shadow: var(--glow);
+    }
+
+    ul.nav-links li a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255,255,255,0.15), 
+        transparent);
+      transform: translateX(-150%) skewX(25deg);
+      transition: transform 0.6s ease;
+    }
+
+    ul.nav-links li a:hover::before {
+      transform: translateX(150%) skewX(25deg);
+    }
+
+    ul.nav-links li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border-radius: 0 0 8px 8px;
+    }
+
+    ul.nav-links li a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+      box-shadow: var(--glow);
+    }
+
+    /* 3D Hover Effect */
+    ul.nav-links li a .nav-text {
+      display: inline-block;
+      transition: transform 0.4s ease;
+      transform-style: preserve-3d;
+    }
+
+    ul.nav-links li:hover a .nav-text {
+      transform: rotateX(360deg);
+    }
+
+    /* Mobile menu button */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 1000;
+      transition: all 0.4s ease;
+      padding: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .mobile-menu-btn:hover {
+      transform: rotate(180deg);
+      color: var(--accent);
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* University Hero Section */
+    .university-hero {
+      position: relative;
+      padding: 220px 2rem 100px;
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .university-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+    }
+
+    .university-bg.active {
+      opacity: 1;
+    }
+
+    .university-bg::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    }
+
+    .university-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      transform: translateY(30px);
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards 0.5s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .university-logo {
+      height: 180px;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+      transition: all 0.5s ease;
+      background: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .university-logo:hover {
+      transform: scale(1.05) rotate(-5deg);
+      box-shadow: 0 0 30px rgba(247, 199, 68, 0.6);
+    }
+
+    .university-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      position: relative;
+      display: inline-block;
+    }
+
+    .university-content h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: var(--glow);
+    }
+
+    .university-content:hover h1::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .university-content h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: white;
+      font-weight: 400;
+      animation: pulse 2.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { 
+        opacity: 0.8; 
+        transform: scale(1);
+      }
+      50% { 
+        opacity: 1; 
+        text-shadow: 0 0 15px rgba(255,255,255,0.4);
+        transform: scale(1.02);
+      }
+      100% { 
+        opacity: 0.8; 
+        transform: scale(1);
+      }
+    }
+
+    .university-content p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      margin-bottom: 3rem;
+      position: relative;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .university-content p::before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 2px;
+      background: var(--accent);
+      box-shadow: var(--glow);
+    }
+
+    /* University Description Section */
+    .university-description {
+      padding: 100px 2rem;
+      background-color: rgba(255,255,255,0.95);
+      color: var(--text-dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .description-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .description-content {
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 50px;
+      transform: translateY(50px);
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards 0.3s;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .description-content h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    .description-content h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 3px;
+      background: var(--accent);
+      box-shadow: var(--glow);
+    }
+
+    .description-content p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      text-align: justify;
+      color: var(--text-dark);
+    }
+
+    .highlight {
+      color: var(--primary);
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+    }
+
+    .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s ease;
+    }
+
+    .highlight:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* Video Gallery Section */
+    .video-gallery {
+      padding: 80px 2rem;
+      background: linear-gradient(135deg, rgba(26, 62, 114, 0.1), rgba(10, 45, 90, 0.1));
+      position: relative;
+    }
+
+    .gallery-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 50px;
+      transform: translateY(30px);
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards 0.3s;
+    }
+
+    .gallery-header h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .gallery-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: var(--accent);
+      box-shadow: var(--glow);
+    }
+
+    .gallery-header p {
+      font-size: 1.2rem;
+      color: var(--text-dark);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .video-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      transform: translateY(50px);
+      opacity: 0;
+     
+        display: block !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+
+    .video-card.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .video-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    .video-thumbnail {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-thumbnail img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .video-card:hover .video-thumbnail img {
+      transform: scale(1.05);
+    }
+
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      background: rgba(247, 199, 68, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 0 10px rgba(247, 199, 68, 0.3);
+    }
+
+    .play-icon i {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-left: 5px;
+    }
+
+    .video-card:hover .play-icon {
+      background: var(--accent);
+      box-shadow: 0 0 0 15px rgba(247, 199, 68, 0.4);
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .video-info {
+      padding: 20px;
+    }
+
+    .video-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--primary);
+      transition: color 0.3s ease;
+    }
+
+    .video-card:hover .video-info h3 {
+      color: var(--secondary);
+    }
+
+    .video-info p {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Modal Video Player */
+    .video-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .video-modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      width: 80%;
+      max-width: 1000px;
+      position: relative;
+    }
+
+    .modal-video {
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .close-modal:hover {
+      color: var(--accent);
+      transform: rotate(90deg);
+    }
+
+    /* Toppers Section */
+    .toppers-section {
+      padding: 80px 2rem;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .toppers-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+      transform: translateY(30px);
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards 0.3s;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: white;
+      box-shadow: 0 0 15px rgba(255,255,255,0.5);
+    }
+
+    .section-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .toppers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 90px;
+    }
+
+    .topper-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform: translateY(50px);
+      opacity: 0;
+      border: 1px solid rgba(255,255,255,0.2);
+      display: block !important;
+    opacity: 1 !important;
+    transform: none !important;
+    }
+
+    .topper-card.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .topper-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      background: rgba(255,255,255,0.15);
+    }
+
+    .topper-img {
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .topper-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .topper-card:hover .topper-img img {
+      transform: scale(1.1);
+    }
+
+    .topper-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .topper-info h3 {
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+      color: var(--accent);
+    }
+
+    .topper-info p {
+      font-size: 1rem;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .topper-rank {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--primary);
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Why Choose Section */
+    .why-choose {
+      padding: 100px 2rem;
+      background-color: rgba(255,255,255,0.95);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-choose-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .why-choose-content {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transform: translateY(50px);
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards 0.3s;
+    }
+
+    .why-choose-content h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    .why-choose-content h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 3px;
+      background: var(--accent);
+      box-shadow: var(--glow);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background: rgba(26, 62, 114, 0.05);
+      border-radius: 15px;
+      padding: 30px;
+      transition: all 0.4s ease;
+      border-left: 4px solid transparent;
+    }
+
+    .feature-card:hover {
+      background: rgba(26, 62, 114, 0.1);
+      border-left: 4px solid var(--accent);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover .feature-icon {
+      color: var(--accent);
+      transform: scale(1.1);
+    }
+
+    .feature-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .feature-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    /* Programs Section */
+    .programs-section {
+      padding: 80px 2rem;
+      background: linear-gradient(135deg, rgba(247, 199, 68, 0.1), rgba(247, 199, 68, 0.05));
+      position: relative;
+         z-index: 1;
+    }
+
+    @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+    }
+
+    .programs-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .program-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+      transform: translateY(50px);
+  
+      opacity: 1 !important;
+        transform: translateY(0) !important;
+        display: block !important;
+        animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .program-card.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .program-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    .program-header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .program-header h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .program-body {
+      padding: 30px;
+      
+      color: rgb(0, 0, 0);
+    }
+
+    .program-features {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .program-features li {
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 35px;
+      font-size: 1.1rem;
+    }
+
+    .program-features li::before {
+      content: '\f00c';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    .program-button {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .program-button:hover {
+      background: transparent;
+      color: var(--primary);
+      border-color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(26, 62, 114, 0.3);
+    }
+
+    /* Contact Section */
+  /* Contact Section - Base Styles */
+.contact-section {
+  padding: 80px 1rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-content {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.contact-content h2 {
+  font-size: 2.2rem;
+  color: var(--accent);
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+}
+
+.contact-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: white;
+  box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.contact-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.4s ease;
+  border-left: 4px solid transparent;
+  backdrop-filter: blur(5px);
+}
+
+.contact-card:hover {
+  background: rgba(255,255,255,0.15);
+  border-left: 4px solid var(--accent);
+  transform: translateY(-5px);
+}
+
+.contact-icon {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.1);
+}
+
+.contact-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+.contact-card:hover h3::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.contact-card p, 
+.contact-card a {
+  color: white;
+  line-height: 1.6;
+  font-size: 1rem;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.contact-card a:hover {
+  color: var(--accent);
+  transform: translateX(5px);
+}
+
+/* Responsive Adjustments */
+
+/* Tablet (768px - 991px) */
+@media screen and (max-width: 991px) {
+  .contact-content {
+    padding: 25px;
+  }
+  
+  .contact-content h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-grid {
+    gap: 20px;
+  }
+  
+  .contact-card {
+    padding: 20px;
+  }
+  
+  .contact-icon {
+    font-size: 1.8rem;
+  }
+  
+  .contact-card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile (577px - 767px) */
+@media screen and (max-width: 767px) {
+  .contact-section {
+    padding: 60px 1rem;
+  }
+  
+  .contact-content {
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .contact-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-content h2::after {
+    width: 80px;
+    height: 2px;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .contact-card {
+    padding: 18px;
+  }
+  
+  .contact-icon {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+}
+
+/* Small Mobile (<= 576px) */
+@media screen and (max-width: 576px) {
+  .contact-section {
+    padding: 50px 0.8rem;
+  }
+  
+  .contact-content {
+    padding: 15px;
+    border-radius: 12px;
+  }
+  
+  .contact-content h2 {
+    font-size: 1.6rem;
+  }
+  
+  .contact-card {
+    padding: 15px;
+  }
+  
+  .contact-icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .contact-card p,
+  .contact-card a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Mobile (<= 400px) */
+@media screen and (max-width: 400px) {
+  .contact-content h2 {
+    font-size: 1.4rem;
+  }
+  
+  .contact-card {
+    padding: 12px;
+  }
+  
+  .contact-icon {
+    font-size: 1.3rem;
+  }
+}
+
+    /* Floating particles */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .particle {
+      position: absolute;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      animation: float 15s infinite linear;
+    }
+
+    .about-particle {
+      position: absolute;
+      border-radius: 50%;
+      animation: float 15s infinite linear;
+      will-change: transform;
+      filter: drop-shadow(0 0 5px rgba(247, 199, 68, 0.5));
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 1400px) {
+      .logo-main {
+        font-size: 1.8rem;
+      }
+      
+      .logo-img {
+        height: 120px;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .logo-main {
+        font-size: 1.5rem;
+      }
+      
+      .logo-sub {
+        font-size: 0.9rem;
+      }
+      
+      ul.nav-links {
+        gap: 1rem;
+      }
+      
+      .university-content h1 {
+        font-size: 3rem;
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      .logo-text {
+        display: none;
+      }
+      
+      .university-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .university-content h2 {
+        font-size: 1.5rem;
+      }
+      
+      .university-content p {
+        font-size: 1.1rem;
+      }
+
+      .programs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        padding: 1rem 1.5rem;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      ul.nav-links {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    height: 100vh;
+    width: 80%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: all 0.5s ease;
+    z-index: 999;
+    box-shadow: 5px 0 25px rgba(0,0,0,0.3);
+    padding-top: 80px;
+  }
+  ul.nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  ul.nav-links li a {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+      
+  ul.nav-links.active {
+    left: 0;
+  }
+      
+      .university-content h1 {
+        font-size: 2rem;
+      }
+      
+      .university-content h2 {
+        font-size: 1.3rem;
+      }
+
+      .logo-img {
+        height: 80px;
+      }
+      
+      .university-hero {
+        padding: 180px 2rem 50px;
+      }
+      
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-content {
+        width: 95%;
+      }
+    }
+    
+    @media screen and (max-width: 576px) {
+      .logo-img {
+        height: 70px;
+      }
+      
+      nav {
+        padding: 0.8rem 1rem;
+      }
+      
+      .university-content h1 {
+        font-size: 1.8rem;
+      }
+      
+      .university-content p {
+        font-size: 1rem;
+      }
+
+      .programs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .program-card {
+        max-width: 100%;
+      }
+    }
+
+        ul.nav-links li a .nav-text {
+    display: inline-block;
+    transition: transform 0.4s ease;
+    transform-style: preserve-3d;
+    }
+
+    ul.nav-links li a:hover .nav-text {
+    transform: translateY(-5px); /* Makes text jump up on hover */
+    }
+
+    /* Ensure both icon and text jump together */
+    ul.nav-links li a:hover .nav-icon,
+    ul.nav-links li a:hover .nav-text {
+   
+    transform: rotateX(360deg);
+    }
+
+
+    .video-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.video-fallback {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 10;
+}
+
+.video-fallback button {
+  background: var(--accent);
+  color: var(--primary);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Floating Scroll Indicator */
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  height: 100vh;
+  width: 6px;
+  background: rgba(26, 62, 114, 0.2); /* Light blue track */
+  z-index: 9999;
+}
+
+.scroll-progress {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to bottom, var(--primary), var(--accent));
+  border-radius: 3px;
+  transition: height 0.1s ease;
+  position: relative;
+}
+
+.scroll-progress::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -3px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Scrollbar Background */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4CAF50, #2e337d);
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px grey;
+}
+
+/* Scrollbar Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #66BB6A, #38438e);
+}
+
+.video-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  background: #000;
+}
+
+.video-thumbnail video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Ensure play icon stays on top */
+.play-icon {
+  z-index: 2;
+}
+
+/* Loading spinner */
+.fa-spin {
+  animation: fa-spin 2s infinite linear;
+}
+
+@keyframes fa-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.bs-students-section {
+    padding: 100px 2rem;
+    background: linear-gradient(135deg, rgba(26, 62, 114, 0.03), rgba(10, 45, 90, 0.03));
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(26, 62, 114, 0.1);
+    border-bottom: 1px solid rgba(26, 62, 114, 0.1);
+  }
+
+  .students-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    backdrop-filter: blur(5px);
+  }
+
+  .students-gallery {
+    display: flex;
+    height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    position: relative;
+  }
+
+  .student-group {
+    flex: 1;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+  }
+
+  .group-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(
+      var(--clip-start) 0%,
+      var(--clip-start) 100%,
+      var(--clip-mid) 100%,
+      var(--clip-mid) 0%
+    );
+    transition: all 0.7s ease;
+    z-index: 1;
+    filter: brightness(0.95);
+  }
+
+  .student-group:hover {
+    flex: 1.5;
+  }
+
+  .student-group:hover .group-image {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+    filter: brightness(1);
+    z-index: 2;
+  }
+
+  .image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(10, 45, 90, 0.9), transparent);
+    color: white;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.5s ease 0.2s;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .student-group:hover .image-overlay {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .image-overlay h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--accent);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  }
+
+  .image-overlay p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+
+  /* Particles */
+  .bs-students-section .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* Glow effect on hover */
+  .student-group::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, 
+      rgba(247, 199, 68, 0.3) 0%, 
+      transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+  }
+
+  .student-group:hover::after {
+    opacity: 1;
+  }
+
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .students-gallery {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .student-group {
+      height: 300px;
+    }
+    
+    .group-image {
+      clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%) !important;
+    }
+    
+    .student-group:hover {
+      flex: 1;
+    }
+  }
+
+  .bs-students-section {
+  padding: 60px 1rem;
+  background: linear-gradient(135deg, rgba(26, 62, 114, 0.03), rgba(10, 45, 90, 0.03));
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(26, 62, 114, 0.1);
+  border-bottom: 1px solid rgba(26, 62, 114, 0.1);
+}
+
+.students-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  backdrop-filter: blur(5px);
+}
+
+.students-gallery {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* Mobile layout */
+@media screen and (max-width: 768px) {
+  .students-gallery {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .student-group {
+    height: 300px;
+    flex: 1 1 auto;
+  }
+  
+  .group-image {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%) !important;
+  }
+  
+  .student-group:hover {
+    flex: 1 1 auto;
+  }
+  
+  .image-overlay {
+    padding: 20px;
+  }
+  
+  .image-overlay h3 {
+    font-size: 1.5rem;
+  }
+  
+  .image-overlay p {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet layout */
+@media screen and (max-width: 992px) {
+  .students-gallery {
+    height: 350px;
+  }
+  
+  .student-group {
+    height: 350px;
+  }
+  
+  .image-overlay h3 {
+    font-size: 1.6rem;
+  }
+}
+
+.student-group {
+  flex: 1;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  height: 100%;
+}
+
+.group-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(
+    var(--clip-start) 0%,
+    var(--clip-start) 100%,
+    var(--clip-mid) 100%,
+    var(--clip-mid) 0%
+  );
+  transition: all 0.7s ease;
+  z-index: 1;
+  filter: brightness(0.95);
+}
+
+.student-group:hover {
+  flex: 1.5;
+}
+
+.student-group:hover .group-image {
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  filter: brightness(1);
+  z-index: 2;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(10, 45, 90, 0.9), transparent);
+  color: white;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.5s ease 0.2s;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.student-group:hover .image-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.image-overlay h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--accent);
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.image-overlay p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Particles */
+.bs-students-section .particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Glow effect on hover */
+.student-group::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, 
+    rgba(247, 199, 68, 0.3) 0%, 
+    transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.student-group:hover::after {
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 1199px) {
+  .logo-img {
+    height: 130px;
+    padding: 7px;
+  }
+  .logo-main {
+    font-size: 1.8rem;
+  }
+  .logo-sub {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet size (768px - 991px) */
+@media screen and (max-width: 991px) {
+  .logo-img {
+    height: 110px;
+    padding: 6px;
+  }
+  .logo-main {
+    font-size: 1.5rem;
+  }
+  .logo-sub {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile size (577px - 767px) */
+@media screen and (max-width: 767px) {
+  .logo-img {
+    height: 100px;
+    padding: 5px;
+  }
+  .logo-main {
+    font-size: 1.3rem;
+  }
+  .logo-sub {
+    font-size: 0.7rem;
+  }
+  .logo-container {
+    gap: 8px;
+  }
+}
+
+/* Small mobile size (<= 576px) */
+@media screen and (max-width: 576px) {
+  .logo-img {
+    height: 90px;
+    padding: 4px;
+  }
+  .logo-main {
+    font-size: 1.1rem;
+  }
+  .logo-sub {
+    font-size: 0.65rem;
+  }
+}
+
+/* Scrolled state adjustments */
+nav.scrolled .logo-img {
+  height: 80px;
+  padding: 4px;
+}
+
+@media screen and (max-width: 991px) {
+  nav.scrolled .logo-img {
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav.scrolled .logo-img {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav.scrolled .logo-img {
+    height: 50px;
+  }
+}
+
+/* Logo container adjustments */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Show/hide logo text based on screen size */
+@media screen and (max-width: 992px) {
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .logo-text {
+    display: none; /* Hide text on very small screens */
+  }
+}
+/* Laptop size (992px - 1199px) */
+@media screen and (max-width: 1199px) {
+  .logo-img {
+    height: 130px;
+    padding: 7px;
+  }
+  .logo-main {
+    font-size: 1.8rem;
+  }
+  .logo-sub {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet size (768px - 991px) */
+@media screen and (max-width: 991px) {
+  .logo-img {
+    height: 110px;
+    padding: 6px;
+  }
+  .logo-main {
+    font-size: 1.5rem;
+  }
+  .logo-sub {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile size (577px - 767px) */
+@media screen and (max-width: 767px) {
+  .logo-img {
+    height: 100px;
+    padding: 5px;
+  }
+  .logo-main {
+    font-size: 1.3rem;
+  }
+  .logo-sub {
+    font-size: 0.7rem;
+  }
+  .logo-container {
+    gap: 8px;
+  }
+}
+
+/* Small mobile size (<= 576px) */
+@media screen and (max-width: 576px) {
+  .logo-img {
+    height: 90px;
+    padding: 4px;
+  }
+  .logo-main {
+    font-size: 1.1rem;
+  }
+  .logo-sub {
+    font-size: 0.65rem;
+  }
+}
+
+/* Scrolled state adjustments */
+nav.scrolled .logo-img {
+  height: 80px;
+  padding: 4px;
+}
+
+@media screen and (max-width: 991px) {
+  nav.scrolled .logo-img {
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav.scrolled .logo-img {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav.scrolled .logo-img {
+    height: 50px;
+  }
+}
+
+/* Logo container adjustments */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Show/hide logo text based on screen size */
+@media screen and (max-width: 992px) {
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .logo-text {
+    font: 20px;
+  }
+}
+ 
+/* Scrolled state adjustments */
+nav.scrolled .logo-img {
+  height: 80px;
+  padding: 4px;
+}
+
+@media screen and (max-width: 991px) {
+  nav.scrolled .logo-img {
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav.scrolled .logo-img {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav.scrolled .logo-img {
+    height: 50px;
+  }
+}
+
+
+
+/* Laptop size (992px - 1199px) */
+@media screen and (max-width: 1199px) {
+  .logo-img {
+    height: 120px; /* Balanced middle size */
+  }
+  .university-logo {
+    height: 140px;
+    padding: 10px;
+  }
+}
+
+/* Tablet size (768px - 991px) */
+@media screen and (max-width: 991px) {
+  .logo-img {
+    height: 100px; /* More balanced size */
+  }
+  .university-logo {
+    height: 120px;
+    padding: 8px;
+    margin-bottom: 20px;
+  }
+  .university-content h1 {
+    font-size: 2.8rem; /* Better proportion */
+  }
+}
+
+/* Mobile size (577px - 767px) */
+@media screen and (max-width: 767px) {
+  .logo-img {
+    height: 90px; /* Better mobile size */
+  }
+  .university-logo {
+    height: 100px;
+    padding: 6px;
+    margin-bottom: 15px;
+  }
+  .university-content h1 {
+    font-size: 2.2rem;
+  }
+  .university-content h2 {
+    font-size: 1.4rem; /* Better readability */
+  }
+}
+
+/* Small mobile size (<= 576px) */
+@media screen and (max-width: 576px) {
+  .logo-img {
+    height: 80px; /* Not too small */
+  }
+  .university-logo {
+    height: 90px; /* More visible */
+    padding: 5px;
+    margin-bottom: 12px;
+  }
+  .university-content h1 {
+    font-size: 1.8rem; /* Still readable */
+  }
+  .university-content h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Scrolled state adjustments - More balanced */
+nav.scrolled .logo-img {
+  height: 80px; /* Reduced from 80px */
+  padding: 4px;
+}
+
+@media screen and (max-width: 991px) {
+  nav.scrolled .logo-img {
+    height: 70px; /* Better proportion */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav.scrolled .logo-img {
+    height: 60px; /* Still visible */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav.scrolled .logo-img {
+    height: 50px; /* Minimum reasonable size */
+  }
+}
+
+.custom-cursor {  
+  width: 12px;  
+  height: 12px;  
+  border: 1px solid white;  
+  border-radius: 50%;  
+  position: fixed;  
+  pointer-events: none;  
+  z-index: 9999;  
+  mix-blend-mode: difference;  
+  transform: translate(-50%, -50%);  
+  transition: width 0.2s, height 0.2s, border-color 0.2s;  
+}  
+
+/* Hover effects */  
+.custom-cursor.hover {  
+  width: 20px;  
+  height: 20px;  
+  border-color: #6E45E2; 
+   
+}  
+
+.custom-cursor.click {  
+  animation: clickEffect 0.3s ease-out;  
+}  
+
+@keyframes clickEffect {  
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }  
+  50% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.7; }  
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }  
+} 
+  </style>
+</head>
+<body>
+
+  <div class="custom-cursor"></div>  
+
+  <!-- Floating Particles -->
+  <div class="particles" id="particles"></div>
+  
+  <nav id="mainNav">
+  
+    <div class="nav-container">
+      <div class="logo-container">
+        
+        <img src="logo.jpg" alt="College Logo" class="logo-img" id="logoImg">
+        <div class="logo-text">
+          <div class="logo-main">F.G Science Degree College</div>
+          <div class="logo-sub">FOR MEN, WAH CANTT</div>
+        </div>
+        
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li>
+            <a href="index.html#home" onclick="scrollToSection('FGSD_Front_page.html', 'home')">
+                <i class="fas fa-home nav-icon"></i> <!-- Added icon -->
+                <span class="nav-text">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="FGSD_Front_page.html#about" onclick="scrollToSection('FGSD_Front_page.html', 'about')">
+                <i class="fas fa-info-circle nav-icon"></i> <!-- Added icon -->
+                <span class="nav-text">About</span>
+            </a>
+        </li>
+        <li>
+          <a href="#" class="active"><i class="fas fa-university nav-icon"></i><span class="nav-text">Affiliated University</span></a>
+        </li>
+        <li>
+            <a href="FGSD_Front_page.html#admission" onclick="scrollToSection('FGSD_Front_page.html', 'admission')">
+              <i class="fas fa-user-graduate nav-icon"></i>
+              <span class="nav-text">Admission</span>
+            </a>
+          </li>
+        <li>
+          <a href="Facilities.html"><i class="fas fa-building nav-icon"></i><span class="nav-text">Facilities</span></a>
+        </li>
+        <li>
+          <a href="Faculty.html"><i class="fas fa-users nav-icon"></i><span class="nav-text">Faulty</span></a>
+        </li>
+        <li>
+          <a href="FGSD_Gallery.html"><i class="fas fa-camera nav-icon"></i><span class="nav-text">Gallery</span></a>
+        </li>
+        <li>
+          <a href="FGSD_Front_Page.html#contact"><i class="fas fa-envelope nav-icon"></i><span class="nav-text">Contact</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- University Hero Section -->
+  <section class="university-hero" id="university">
+    <!-- Background Slideshow -->
+    <div class="university-bg active" style="background-image: url('NUP.webp');"></div>
+    <div class="university-bg" style="background-image: url('About_bg_pic.png');"></div>
+    <div class="university-bg" style="background-image: url('Nup.png');"></div>
+    
+    <div class="university-content">
+      <img src="Nup_logo.jpeg" alt="NUP Logo" class="university-logo">
+      <h1>National University of Pakistan</h1>
+      <h2>Our Esteemed Affiliated University</h2>
+      <p>F.G Science Degree College is proudly affiliated with the National University of Pakistan (NUP), a premier institution dedicated to academic excellence, innovation, and leadership development in higher education.</p>
+    </div>
+  </section>
+
+  <!-- University Description Section -->
+  <section class="university-description">
+    <div class="description-container">
+      <div class="description-content">
+        <h1>About National University of Pakistan</h1>
+        <p>The <span class="highlight">National University of Pakistan (NUP)</span> stands as a beacon of higher education in the country, committed to providing world-class academic programs and fostering an environment of research and innovation. Established with the vision to create leaders and thinkers, NUP has consistently ranked among the top universities in Pakistan.</p>
+        
+        <p>With its <span class="highlight">state-of-the-art facilities</span>, distinguished faculty, and comprehensive curriculum, NUP offers students an unparalleled educational experience. The university's emphasis on <span class="highlight">practical learning</span> and <span class="highlight">industry collaboration</span> ensures that graduates are well-prepared to meet the challenges of the modern world.</p>
+        
+        <p>NUP's affiliation with F.G Science Degree College brings this excellence to Wah Cantt, allowing our students to benefit from <span class="highlight">quality education</span> while studying in their hometown. Our BS programs in Computer Science and Physics are meticulously designed to meet NUP's rigorous academic standards.</p>
+        
+        <p>The university's <span class="highlight">dynamic learning environment</span>, coupled with its commitment to <span class="highlight">research and development</span>, makes it an ideal choice for students seeking comprehensive higher education. NUP's degree programs are recognized nationally and internationally, opening doors to global opportunities for our graduates.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Gallery Section -->
+<!-- Video Gallery Section -->
+<section class="video-gallery">
+    <div class="gallery-container">
+      <div class="gallery-header">
+        <h2>NUP in Action</h2>
+        <p>Explore our university through these inspiring videos showcasing NUP's achievements, values, and contributions to education and society.</p>
+      </div>
+      
+      <div class="video-grid">
+        <!-- Video 1 -->
+        <div class="video-card" style="animation-delay: 0.1s">
+          <div class="video-thumbnail">
+            <video class="video-preview" poster="thumbnailofCareer.jpeg" preload="metadata">
+              <source src="Nup_strugling.mp4" type="video/mp4">
+            </video>
+            <div class="play-icon">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>NUP: Struggling for Career</h3>
+            <p>How NUP prepares students for successful careers through comprehensive education and skill development.</p>
+          </div>
+        </div>
+        
+        <!-- Video 2 -->
+        <div class="video-card" style="animation-delay: 0.2s">
+          <div class="video-thumbnail">
+            <video class="video-preview" poster="Thumbnailofstruggle.png" preload="metadata">
+              <source src="Nup_struguls.mp4" type="video/mp4">
+            </video>
+            <div class="play-icon">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>The NUP Journey</h3>
+            <p>Exploring the challenges and triumphs in NUP's path to becoming a leading educational institution.</p>
+          </div>
+        </div>
+        
+        <!-- Video 3 -->
+        <div class="video-card" style="animation-delay: 0.3s">
+          <div class="video-thumbnail">
+            <video class="video-preview" poster="Thumbnailofvalue.png" preload="metadata">
+              <source src="Nup_university_value.mp4" type="video/mp4">
+            </video>
+            <div class="play-icon">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>The Value of NUP Education</h3>
+            <p>Discover how an NUP degree adds significant value to your professional and personal development.</p>
+          </div>
+        </div>
+        
+        <!-- Video 4 -->
+        <div class="video-card" style="animation-delay: 0.4s">
+          <div class="video-thumbnail">
+            <video class="video-preview" poster="Marketingthunmbnail.png" preload="metadata">
+              <source src="Struggling_for_marketing.mp4" type="video/mp4">
+            </video>
+            <div class="play-icon">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>Marketing Education at NUP</h3>
+            <p>How NUP approaches the challenge of marketing education in the modern competitive landscape.</p>
+          </div>
+        </div>
+        
+        <!-- Video 5 -->
+        <div class="video-card" style="animation-delay: 0.5s">
+          <div class="video-thumbnail">
+            <video class="video-preview" poster="National University Tribute to Pak Army.png" preload="metadata">
+              <source src="Tribute_to_army_by_Nup.mp4" type="video/mp4">
+            </video>
+            <div class="play-icon">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>Tribute to Our Armed Forces</h3>
+            <p>NUP's special tribute to the brave men and women of Pakistan's armed forces.</p>
+          </div>
+        </div>
+        
+        <!-- Video 6 -->
+        <div class="video-card" style="animation-delay: 0.6s">
+          <div class="video-thumbnail">
+            <video class="video-preview" poster="Tribute.png" preload="metadata">
+              <source src="Tribute_to_army.mp4" type="video/mp4">
+            </video>
+            <div class="play-icon">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="video-info">
+            <h3>Honoring Our Heroes</h3>
+            <p>A heartfelt tribute from NUP to Pakistan's military heroes who protect our nation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Modal -->
+  <div class="video-modal" id="videoModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal">&times;</span>
+      <video class="modal-video" id="modalVideo" controls>
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+  </div>
+
+  <!-- Toppers Section -->
+  <section class="toppers-section">
+    <div class="toppers-container">
+      <div class="section-header">
+        <h2>Our NUP Toppers at FGSD</h2>
+        <p>Celebrating the exceptional achievements of our students who have excelled in NUP's rigorous academic programs.</p>
+      </div>
+      
+      <div class="toppers-grid">
+        <!-- Topper 1 -->
+        <div class="topper-card" style="animation-delay: 0.1s">
+          <div class="topper-img">
+            <img src="Ali.jpg" alt="Ali - NUP Topper">
+          </div>
+          <div class="topper-info">
+            <h3>Ali Ahmed</h3>
+            <p>BS Computer Science</p>
+            <span class="topper-rank">Highest Marks in BSCS</span>
+          </div>
+        </div>
+        
+        <!-- Topper 2 -->
+        <div class="topper-card" style="animation-delay: 0.2s">
+          <div class="topper-img">
+            <img src="areeba.png" alt="Areeba - NUP Topper">
+          </div>
+          <div class="topper-info">
+            <h3>Areeba Saeed</h3>
+            <p>BS Computer Science</p>
+            <span class="topper-rank">Highest Marks</span>
+          </div>
+        </div>
+        
+        <!-- Topper 3 -->
+        <div class="topper-card" style="animation-delay: 0.3s">
+          <div class="topper-img">
+            <img src="Fatima.jpg" alt="Fatima - NUP Topper">
+          </div>
+          <div class="topper-info">
+            <h3>Fatima Sajjad</h3>
+            <p>BS Physics</p>
+            <span class="topper-rank">University Topper</span>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+    <section class="bs-students-section">
+        <div class="section-header">
+          <h2>Our 1st BS Students at NUP </h2>
+          <p>Meet the vibrant community of BS students at F.G Science Degree College</p>
+        </div>
+        
+        <div class="students-container">
+          <div class="students-gallery">
+            <!-- Student Group 1 -->
+            <div class="student-group" style="--clip-start: 0%; --clip-mid: 50%;">
+              <div class="group-image" style="background-image: url('BS_students.jpg')">
+                <div class="image-overlay">
+                  <h3>BS Computer Science</h3>
+                  <p>Class of 2024</p>
+                </div>
+                <div class="particles" id="particles1"></div>
+              </div>
+            </div>
+            
+            <!-- Student Group 2 -->
+            <div class="student-group" style="--clip-start: 50%; --clip-mid: 100%;">
+              <div class="group-image" style="background-image: url('BS_student1.jpg')">
+                <div class="image-overlay">
+                  <h3>BS Physics & Computer Science</h3>
+                  <p>Class of 2024</p>
+                </div>
+                <div class="particles" id="particles2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  <!-- Why Choose NUP Section -->
+  <section class="why-choose">
+    <div class="why-choose-container">
+      <div class="why-choose-content">
+        <h2>Why Choose National University of Pakistan?</h2>
+        
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Academic Excellence</h3>
+            <p>NUP maintains rigorous academic standards with curricula designed by industry experts and renowned academics, ensuring our graduates are well-prepared for professional success.</p>
+          </div>
+          
+          <!-- Feature 2 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h3>Research Opportunities</h3>
+            <p>Students have access to cutting-edge research facilities and opportunities to work with faculty on groundbreaking projects in various scientific disciplines.</p>
+          </div>
+          
+          <!-- Feature 3 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h3>Expert Faculty</h3>
+            <p>Learn from distinguished professors and industry professionals who bring real-world experience and academic expertise to the classroom.</p>
+          </div>
+          
+          <!-- Feature 4 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h3>Career Preparation</h3>
+            <p>NUP's strong industry connections and career services help students secure internships and employment with leading organizations.</p>
+          </div>
+          
+          <!-- Feature 5 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3>Global Recognition</h3>
+            <p>NUP degrees are recognized internationally, opening doors to global opportunities for higher education and employment.</p>
+          </div>
+          
+          <!-- Feature 6 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Vibrant Community</h3>
+            <p>Join a diverse community of scholars and participate in numerous extracurricular activities, clubs, and events that enrich the university experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section class="programs-section">
+  <div class="programs-container">
+    <div class="section-header">
+      <h2>NUP Programs Offered at Our College</h2>
+      <p>F.G Science Degree College offers the following BS programs affiliated with National University of Pakistan</p>
+    </div>
+    
+    <div class="programs-grid">
+      <!-- BS Computer Science -->
+      <div class="program-card">
+        <div class="program-header">
+          <h3>BS Computer Science</h3>
+        </div>
+        <div class="program-body">
+          <p>A comprehensive program designed to prepare students for careers in software development, data science, artificial intelligence, and other cutting-edge technology fields.</p>
+          <ul class="program-features">
+            <li>Four-year degree program following NUP curriculum</li>
+            <li>Specializations available in AI, Cybersecurity, and Data Science</li>
+            <li>State-of-the-art computer labs and facilities</li>
+            <li>Industry-relevant projects and internships</li>
+            <li>Preparation for international certifications</li>
+          </ul>
+          <a href="F.G Science Degree College Prospectus 2025-compressed.pdf" class="program-button">Learn More</a>
+        </div>
+      </div>
+      
+      <!-- BS Physics -->
+      <div class="program-card">
+        <div class="program-header">
+          <h3>BS Physics</h3>
+        </div>
+        <div class="program-body">
+          <p>An intensive physics program that provides strong theoretical foundations along with practical applications in various scientific and technological fields.</p>
+          <ul class="program-features">
+            <li>Rigorous four-year physics curriculum</li>
+            <li>Specializations in Applied Physics and Theoretical Physics</li>
+            <li>Modern physics laboratory with advanced equipment</li>
+            <li>Research opportunities with faculty members</li>
+            <li>Pathway to graduate studies and research careers</li>
+          </ul>
+          <a href="F.G Science Degree College Prospectus 2025-compressed.pdf" class="program-button">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-content">
+        <h2>Contact National University of Pakistan</h2>
+        
+        <div class="contact-grid">
+          <!-- Address -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Main Campus</h3>
+            <p>190-A, Sir Syed Road, Rawalpindi Cantt</p>
+            <p>Pakistan</p>
+          </div>
+          
+          <!-- Phone -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3>Phone</h3>
+            <a href="tel:+92511234567">+92 51 1234567</a>
+            <a href="tel:+92519876543">+92 51 9876543</a>
+          </div>
+          
+          <!-- Email -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <a href="mailto:info@nup.edu.pk">info@nup.edu.pk</a>
+            <a href="mailto:admissions@nup.edu.pk">admissions@nup.edu.pk</a>
+          </div>
+          
+          <!-- Website -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3>Website</h3>
+            <a href="https://www.nup.edu.pk" target="_blank">www.nup.edu.pk</a>
+            <p>Visit for detailed information</p>
+          </div>
+          
+          <!-- Office Hours -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Office Hours</h3>
+            <p>Monday to Friday</p>
+            <p>8:00 AM - 4:00 PM</p>
+          </div>
+          
+          <!-- Social Media - Updated Section -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-share-alt"></i>
+            </div>
+            <h3>Social Media</h3>
+            <a href="https://www.facebook.com/nupakofficial" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://whatsapp.com/channel/0029Vat95qT3mFY0xxfMq40P" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://www.linkedin.com/company/islamabad-2k25/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.instagram.com/nupakofficial/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Sticky navigation effect
+    const nav = document.getElementById('mainNav');
+    const logoImg = document.getElementById('logoImg');
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+        logoImg.style.height = '80px';
+        logoImg.style.padding = '5px';
+      } else {
+        nav.classList.remove('scrolled');
+        logoImg.style.height = '150px';
+        logoImg.style.padding = '8px';
+      }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+      this.innerHTML = navLinks.classList.contains('active') ? 
+        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Logo hover effect
+    logoImg.addEventListener('mouseenter', function() {
+      this.style.transform = 'scale(1.1) rotate(-5deg)';
+      this.style.boxShadow = '0 0 25px rgba(247, 199, 68, 0.8)';
+    });
+    
+    logoImg.addEventListener('mouseleave', function() {
+      this.style.transform = 'scale(1) rotate(0)';
+      this.style.boxShadow = 'none';
+    });
+
+    // Create floating particles
+    const particlesContainer = document.getElementById('particles');
+    const particleCount = 30;
+    
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      
+      // Random properties
+      const size = Math.random() * 8 + 2;
+      const posX = Math.random() * 100;
+      const posY = Math.random() * 100 + 100;
+      const delay = Math.random() * 15;
+      const duration = Math.random() * 10 + 15;
+      
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${posX}%`;
+      particle.style.top = `${posY}%`;
+      particle.style.animationDelay = `${delay}s`;
+      particle.style.animationDuration = `${duration}s`;
+      
+      particlesContainer.appendChild(particle);
+    }
+
+    // Background Slideshow
+    const bgSlides = document.querySelectorAll('.university-bg');
+    let currentSlide = 0;
+    
+    function changeBackground() {
+      bgSlides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % bgSlides.length;
+      bgSlides[currentSlide].classList.add('active');
+    }
+    
+    setInterval(changeBackground, 5000);
+
+    // Initialize the slideshow
+    changeBackground();
+
+// Video Gallery Functionality
+// Video Gallery Functionality
+// Video Gallery Functionality - Fixed Version
+const videoPreviews = document.querySelectorAll('.video-preview');
+const playButtons = document.querySelectorAll('.play-icon');
+const videoModal = document.getElementById('videoModal');
+let currentModalVideo = null;
+
+// Debugging function
+function logVideoState(video, prefix = "") {
+  console.log(`${prefix} Video State:`, {
+    paused: video.paused,
+    ended: video.ended,
+    currentTime: video.currentTime,
+    readyState: video.readyState,
+    networkState: video.networkState,
+    error: video.error
+  });
+}
+
+// Properly destroy video element
+function destroyVideoElement(video) {
+  if (!video) return;
+  
+  console.log("Destroying video element...");
+  logVideoState(video, "Before destruction");
+  
+  // 1. Stop playback
+  video.pause();
+  
+  // 2. Remove all event listeners
+  video.oncanplay = null;
+  video.onerror = null;
+  video.onplay = null;
+  video.onpause = null;
+  video.onended = null;
+  
+  // 3. Remove source and trigger load
+  video.removeAttribute('src');
+  const source = video.querySelector('source');
+  if (source) {
+    source.remove();
+  }
+  video.load();
+  
+  // 4. Remove from DOM
+  video.remove();
+  
+  console.log("Video element destroyed");
+}
+
+// Close modal and completely clean up video
+function closeVideoModal() {
+  console.log("Closing video modal...");
+  
+  if (currentModalVideo) {
+    destroyVideoElement(currentModalVideo);
+    currentModalVideo = null;
+  }
+  
+  videoModal.classList.remove('active');
+  videoModal.innerHTML = ''; // Clear all modal content
+  
+  console.log("Video modal closed and cleaned up");
+}
+
+// Open modal with video
+function openVideoModal(videoSrc) {
+  console.log(`Opening video modal for: ${videoSrc}`);
+  
+  // Close any existing modal first
+  if (currentModalVideo) {
+    closeVideoModal();
+  }
+  
+  // Create new modal content
+  videoModal.innerHTML = `
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="video-loading">
+        <i class="fas fa-spinner fa-spin"></i> Loading video...
+      </div>
+      <video class="modal-video" id="modalVideo" controls>
+        <source src="${videoSrc}" type="video/mp4">
+      </video>
+      <div class="video-fallback" style="display:none;">
+        <p><i class="fas fa-exclamation-triangle"></i> Video could not be loaded</p>
+        <button class="retry-btn"><i class="fas fa-sync-alt"></i> Retry</button>
+      </div>
+    </div>
+  `;
+  
+  const modalVideo = videoModal.querySelector('#modalVideo');
+  currentModalVideo = modalVideo;
+  const loadingMessage = videoModal.querySelector('.video-loading');
+  const fallbackMessage = videoModal.querySelector('.video-fallback');
+  const closeButton = videoModal.querySelector('.close-modal');
+  
+  // Video event handlers
+  modalVideo.oncanplay = function() {
+    console.log("Video can play");
+    loadingMessage.style.display = 'none';
+    this.play().catch(e => {
+      console.error("Video play failed:", e);
+      fallbackMessage.style.display = 'block';
+    });
+  };
+  
+  modalVideo.onerror = function() {
+    console.error("Video error:", this.error);
+    loadingMessage.style.display = 'none';
+    fallbackMessage.style.display = 'block';
+  };
+  
+  modalVideo.onended = function() {
+    console.log("Video ended naturally");
+    this.currentTime = 0;
+  };
+  
+  // Retry button handler
+  videoModal.querySelector('.retry-btn')?.addEventListener('click', function() {
+    console.log("Retrying video load...");
+    fallbackMessage.style.display = 'none';
+    loadingMessage.style.display = 'block';
+    modalVideo.load();
+  });
+  
+  // Close button handler
+  closeButton.addEventListener('click', closeVideoModal);
+  
+  videoModal.classList.add('active');
+  console.log("Video modal opened");
+}
+
+// Play button handlers
+playButtons.forEach((button, index) => {
+  button.addEventListener('click', function() {
+    const videoCard = this.closest('.video-card');
+    const videoPreview = videoCard.querySelector('.video-preview');
+    const videoSrc = videoPreview.querySelector('source').src;
+    openVideoModal(videoSrc);
+  });
+});
+
+// Close modal when clicking outside
+videoModal.addEventListener('click', function(e) {
+  if (e.target === videoModal) {
+    closeVideoModal();
+  }
+});
+
+// Preview video hover behavior
+videoPreviews.forEach(video => {
+  video.addEventListener('mouseenter', function() {
+    this.muted = true;
+    this.play().catch(e => console.log("Preview play ignored:", e));
+  });
+  
+  video.addEventListener('mouseleave', function() {
+    this.pause();
+    this.currentTime = 0;
+  });
+});
+
+// Ensure videos are stopped when page is hidden
+document.addEventListener('visibilitychange', function() {
+  if (document.hidden && currentModalVideo) {
+    console.log("Page hidden - stopping video");
+    closeVideoModal();
+  }
+});
+
+// Clean up on page unload
+window.addEventListener('beforeunload', function() {
+  if (currentModalVideo) {
+    console.log("Page unloading - cleaning up video");
+    closeVideoModal();
+  }
+});
+// Close modal when clicking outside
+videoModal.addEventListener('click', function(e) {
+  if (e.target === videoModal) {
+    videoModal.classList.remove('active');
+    const modalVideo = videoModal.querySelector('#modalVideo');
+    if (modalVideo) {
+      modalVideo.pause();
+      modalVideo.currentTime = 0;
+    }
+  }
+});
+    // Animate elements on scroll
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.video-card, .topper-card, .program-card');
+      
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+        
+        if (elementPosition < screenPosition) {
+          element.classList.add('visible');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+
+    // Create about particles
+    const aboutParticles = document.createElement('div');
+    aboutParticles.classList.add('particles');
+    aboutParticles.id = 'aboutParticles';
+    document.querySelector('.university-description').appendChild(aboutParticles);
+    
+    const aboutParticleCount = 20;
+    
+    for (let i = 0; i < aboutParticleCount; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('about-particle');
+      
+      // Random properties
+      const size = Math.random() * 10 + 5;
+      const posX = Math.random() * 100;
+      const posY = Math.random() * 100;
+      const delay = Math.random() * 15;
+      const duration = Math.random() * 15 + 10;
+      const opacity = Math.random() * 0.4 + 0.1;
+      
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${posX}%`;
+      particle.style.top = `${posY}%`;
+      particle.style.animationDelay = `${delay}s`;
+      particle.style.animationDuration = `${duration}s`;
+      particle.style.opacity = opacity;
+      particle.style.background = `rgba(${Math.floor(Math.random() * 56) + 200}, ${Math.floor(Math.random() * 56) + 200}, ${Math.floor(Math.random() * 56) + 200}, ${opacity})`;
+      
+      aboutParticles.appendChild(particle);
+    }
+
+    // Highlight effect for features
+    const highlights = document.querySelectorAll('.highlight');
+    
+    highlights.forEach(highlight => {
+      highlight.addEventListener('mouseenter', function() {
+        this.style.color = 'var(--accent)';
+      });
+      
+      highlight.addEventListener('mouseleave', function() {
+        this.style.color = 'var(--primary)';
+      });
+    });
+
+    // Responsive adjustments
+    function handleResize() {
+      if (window.innerWidth < 768) {
+        // Mobile adjustments
+      } else {
+        // Desktop adjustments
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+  // Function to handle cross-page section scrolling
+  function scrollToSection(page, sectionId) {
+    // Check if we're already on the target page
+    if (window.location.href.includes(page)) {
+      // Scroll to section if it exists
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+      return false; // Prevent default link behavior
+    }
+    // If not on the target page, let the link load normally
+    return true;
+  }
+
+  // Alternative: Force scroll after page load (if coming from another page)
+  window.onload = function() {
+    const hash = window.location.hash;
+    if (hash) {
+      const targetSection = document.querySelector(hash);
+      if (targetSection) {
+        setTimeout(() => {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }, 500); // Small delay to ensure page is fully loaded
+      }
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    animateOnScroll(); // Run immediately
+    window.addEventListener('scroll', animateOnScroll);
+    
+    // Force reflow to trigger animations
+    document.querySelectorAll('.video-card, .topper-card, .program-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(50px)';
+    });
+});
+
+// Create the scroll indicator
+const scrollIndicator = document.createElement('div');
+scrollIndicator.className = 'scroll-indicator';
+
+const scrollProgress = document.createElement('div');
+scrollProgress.className = 'scroll-progress';
+
+scrollIndicator.appendChild(scrollProgress);
+document.body.appendChild(scrollIndicator);
+
+// Update scroll progress
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const scrollHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / scrollHeight) * 100;
+  
+  scrollProgress.style.height = `${progress}%`;
+});
+
+// Animate programs on scroll
+function animateProgramsOnScroll() {
+  const programCards = document.querySelectorAll('.program-card');
+  const triggerBottom = window.innerHeight / 5 * 4;
+  
+  programCards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+    
+    if (cardTop < triggerBottom) {
+      card.classList.add('visible');
+    }
+  });
+}
+
+// Run on load and scroll
+window.addEventListener('load', animateProgramsOnScroll);
+window.addEventListener('scroll', animateProgramsOnScroll);
+
+
+ document.addEventListener('DOMContentLoaded', function() {
+    // Create golden particles for BS Students section
+    function createParticles(containerId, count = 20) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      
+      for (let i = 0; i < count; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        // Random properties
+        const size = Math.random() * 5 + 2;
+        const posX = Math.random() * 100;
+        const posY = Math.random() * 100;
+        const delay = Math.random() * 15;
+        const duration = Math.random() * 10 + 15;
+        const opacity = Math.random() * 0.3 + 0.1;
+        
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${posX}%`;
+        particle.style.top = `${posY}%`;
+        particle.style.animationDelay = `${delay}s`;
+        particle.style.animationDuration = `${duration}s`;
+        particle.style.opacity = opacity;
+        particle.style.background = `rgba(247, 199, 68, ${opacity})`;
+        particle.style.boxShadow = `0 0 ${size*2}px rgba(247, 199, 68, ${opacity})`;
+        particle.style.borderRadius = '50%';
+        
+        container.appendChild(particle);
+      }
+    }
+    
+    // Initialize particles for both images
+    createParticles('particles1');
+    createParticles('particles2');
+    
+    // Add subtle scale effect
+    const studentGroups = document.querySelectorAll('.student-group');
+    studentGroups.forEach(group => {
+      group.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.02)';
+      });
+      
+      group.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+      });
+    });
+  });
+
+  document.querySelectorAll('.nav-links a[href="#admission"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Close mobile menu if open
+    if (navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+    
+    // Scroll to admission section
+    document.getElementById('admission').scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
+const cursor = document.querySelector('.custom-cursor');  
+
+document.addEventListener('mousemove', (e) => {  
+  cursor.style.left = e.clientX + 'px';  
+  cursor.style.top = e.clientY + 'px';  
+});  
+
+// Hover effects  
+document.querySelectorAll('a, button').forEach(el => {  
+  el.addEventListener('mouseenter', () => cursor.classList.add('hover'));  
+  el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));  
+});  
+
+// Click effect  
+document.addEventListener('mousedown', () => cursor.classList.add('click'));  
+document.addEventListener('mouseup', () => cursor.classList.remove('click'));  
+  </script>
+</body>
+</html>
